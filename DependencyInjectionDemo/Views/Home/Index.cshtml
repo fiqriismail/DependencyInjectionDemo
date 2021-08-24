@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DependencyInjectionDemo.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Dependency Injection Tutorial</h1>
+<h2>Posts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Body)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Body)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new {  id=item.Id }) 
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

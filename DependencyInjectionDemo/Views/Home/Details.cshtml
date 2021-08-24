@@ -1,0 +1,22 @@
+﻿@model DependencyInjectionDemo.Models.Post
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Dependency Injection Tutorial</h1>
+<h2>Details</h2>
+
+<div>
+    <h4>@Model.Title</h4>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <p>@Model.Body</p>
+            <small>Created by: @Model.UserId</small>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

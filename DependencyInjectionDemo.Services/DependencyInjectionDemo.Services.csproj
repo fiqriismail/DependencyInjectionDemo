@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DependencyInjectionDemo.Data\DependencyInjectionDemo.Data.csproj" />
+    <ProjectReference Include="..\DependencyInjectionDemo.Models\DependencyInjectionDemo.Models.csproj" />
+  </ItemGroup>
+
+</Project>
