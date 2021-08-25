@@ -22,7 +22,7 @@ namespace DependencyInjectionDemo.Web.Controllers
 
         public IActionResult Index()
         {
-            var blogService = new BlogService();
+            var blogService = new BlogHardCodedService();
             var posts = blogService.GetAllPosts();
             return View(posts);
         }
@@ -40,7 +40,7 @@ namespace DependencyInjectionDemo.Web.Controllers
 
         public IActionResult Details(int id)
         {
-            var blogService = new BlogService();
+            var blogService = new BlogHardCodedService();
             var post = blogService.GetPost(id);
 
             return View(post);

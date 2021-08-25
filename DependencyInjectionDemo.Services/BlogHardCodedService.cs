@@ -6,7 +6,7 @@ using DependencyInjectionDemo.Models;
 
 namespace DependencyInjectionDemo.Services
 {
-    public class BlogService
+    public class BlogHardCodedService
     {
         public List<Post> GetAllPosts()
         {
