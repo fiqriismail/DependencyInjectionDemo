@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DependencyInjectionDemo.Services;
+using DependencyInjectionDemo.Shared;
 
 namespace DependencyInjectionDemo.Web
 {
@@ -23,6 +25,11 @@ namespace DependencyInjectionDemo.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddScoped<IBlogService, BlogHardCodedService>();
+            services.AddHttpClient<IBlogService, BlogHttpService>(client =>
+            {
+                client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com");
+            });
             services.AddControllersWithViews();
         }
 

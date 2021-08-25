@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DependencyInjectionDemo.Services\DependencyInjectionDemo.Services.csproj" />
+    <ProjectReference Include="..\DependencyInjectionDemo.Shared\DependencyInjectionDemo.Shared.csproj" />
   </ItemGroup>
 
 </Project>
